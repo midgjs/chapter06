@@ -38,10 +38,20 @@ public class Client {
 		
 		//스캐너
 		Scanner sc = new Scanner(System.in);
+		/*
+		스캐너 안쓸시
+		InputStream in = System.in;(자바 기본키보드)
+		InputStreamReader sisr = new InputStreamReader(in, "UTF-8");
+		BufferedReader sbr = new BufferedReader(sisr);
+		*/
 		
 		while(true) {
 			//키보드 입력 
 			String str = sc.nextLine();
+			/*
+			스캐너안쓸시
+			String str = sbr.readLine();
+			*/
 			
 			if(str.equals("/q")) {
 				break;
@@ -62,6 +72,16 @@ public class Client {
 		
 		System.out.println("=========================================");
 		System.out.println("<클라이언트 종료>");
+		/*
+		sysout안쓸시
+		OutputStream out = System.out;
+		OutputStreamWriter posw = new OutputStreamWriter(out, "UTF-8");
+		BufferedWriter pbw = new BufferedWriter(posw);
+		
+		pbw.write("클라이언트 종료")
+		pbw.newLine();
+		pbw.flush(); 
+		*/
 		
 		sc.close();
 		br.close();
